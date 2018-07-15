@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestKeyVault.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ClientID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">############</Value>
+    </Setting>
+    <Setting Name="ClientSecret" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#############</Value>
+    </Setting>
+    <Setting Name="MySecretUri" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://##########.vault.azure.net/secrets/my-secret/#############</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
