@@ -14,6 +14,8 @@ const keyvaultUri = process.env['AZURE_KEYVAULT_URI'];
 const secretName = process.env['AZURE_KEYVAULT_SECRET_NAME'];
 const secretVersion = process.env['AZURE_KEYVAULT_SECRET_VERSION'];
 
+var mySecretValue = '';
+
 // Authenticates to the Azure Key Vault by providing a callback to authenticate using ADAL.
 function authUsingAdalCallback() {
     console.log("Using ADAL to authenticate to '" + keyvaultUri + "'");
@@ -39,6 +41,9 @@ function authUsingAdalCallback() {
         .then((bundle) => {
             console.log("Successfully retrieved 'my-secret'");
             console.log(bundle);
+            mySecretValue = bundle.value;
+
+            console.log('KeyVault secret value retrieved: ' + mySecretValue);
         })
         .catch((err) => {
             console.log(err);
